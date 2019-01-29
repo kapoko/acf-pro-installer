@@ -184,15 +184,15 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     {
         // \A = start of string, \Z = end of string
         // See: http://stackoverflow.com/a/34994075
-        $major_minor_patch_optional = '/\A\d\.\d\.\d{1,2}(?:\.\d)?\Z/';
+        // $major_minor_patch_optional = '/\A\d\.\d\.\d{1,2}(?:\.\d)?\Z/';
 
-        if (!preg_match($major_minor_patch_optional, $version)) {
-            throw new \UnexpectedValueException(
-                'The version constraint of ' . self::ACF_PRO_PACKAGE_NAME .
-                ' should be exact (with 3 or 4 digits). ' .
-                'Invalid version string "' . $version . '"'
-            );
-        }
+        // if (!preg_match($major_minor_patch_optional, $version)) {
+        //     throw new \UnexpectedValueException(
+        //         'The version constraint of ' . self::ACF_PRO_PACKAGE_NAME .
+        //         ' should be exact (with 3 or 4 digits). ' .
+        //         'Invalid version string "' . $version . '"'
+        //     );
+        // }
 
         return $version;
     }
